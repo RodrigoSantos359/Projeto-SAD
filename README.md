@@ -54,44 +54,44 @@ Veja os arquivos na pasta:
 
 <div align="center">
 
-- 00_ETLANP_DataMart.ktr
+00_ETLANP_DataMart.ktr
 
 <img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/00_ETL_ANP_DataMart.png width="420px">
 
 
-- 00_Validar_Layout.ktr
+00_Validar_Layout.ktr
 
-<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/00_Validar_Layout.png width="420px">
+<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/00_Validar_layout.png width="420px">
 
-- 01_Carga_Staging.ktr
+01_Carga_Staging.ktr
 
 <img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/01_Carga_Staging.png width="420px">
 
-- 02_Limpeza_Dados.ktr
+02_Limpeza_Dados.ktr
 
 <img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/02_Limpeza_Dados.png width="420px">
 
-- 03_Dim_Tempo.ktr
+03_Dim_Tempo.ktr
 
 <img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/03_Dim_Tempo.png width="420px">
 
-- 04_Dim_Combustivel.ktr
+04_Dim_Combustivel.ktr
 
 <img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/04_Dim_Combustivel.png width="420px">
 
-- 05_Dim_Localizacao.ktr
+05_Dim_Localizacao.ktr
 
 <img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/05_Dim_Localizacao.png width="420px">
 
-- 06_Dim_Revenda.ktr
+06_Dim_Revenda.ktr
 
 <img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/06_Dim_Revenda.png width="420px">
 
-- 07_Dim_Bandeira.ktr
+07_Dim_Bandeira.ktr
 
 <img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/07_Dim_Bandeira.png width="420px">
 
-- 08_Carga_Fato_Preco
+08_Carga_Fato_Preco
 
 <img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/08_Carga_Fato_Preco.png width="420px">
 
