@@ -40,12 +40,59 @@ docker exec -i dw_combustiveis psql -U postgres -d dm_anp_pernambuco < sql/05_in
 ```
 Veja os arquivos na pasta:
 
-- [01_create_database.sql](PDI/sql/01_create_database.sql)
+- [01_create_database.sql](ETL/sql/01_create_database.sql)
 
-- [02_create_staging.sql](PDI/sql/02_create_staging.sql)
+- [02_create_staging.sql](ETL/sql/02_create_staging.sql)
 
-- [03_create_dimensions.sql](PDI/sql/03_create_dimensions.sql)
+- [03_create_dimensions.sql](ETL/sql/03_create_dimensions.sql)
 
-- [04_create_fact.sql](PDI/sql/04_create_fact.sql)
+- [04_create_fact.sql](ETL/sql/04_create_fact.sql)
 
-- [05_indexes.sql](PDI/sql/05_indexes.sql)
+- [05_indexes.sql](ETL/sql/05_indexes.sql)
+
+### Plano de Carga ELT:
+
+<div align="center">
+
+- 00_ETLANP_DataMart.ktr
+
+<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/00_ETL_ANP_DataMart.png width="420px">
+
+
+- 00_Validar_Layout.ktr
+
+<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/00_Validar_Layout.png width="420px">
+
+- 01_Carga_Staging.ktr
+
+<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/01_Carga_Staging.png width="420px">
+
+- 02_Limpeza_Dados.ktr
+
+<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/02_Limpeza_Dados.png width="420px">
+
+- 03_Dim_Tempo.ktr
+
+<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/03_Dim_Tempo.png width="420px">
+
+- 04_Dim_Combustivel.ktr
+
+<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/04_Dim_Combustivel.png width="420px">
+
+- 05_Dim_Localizacao.ktr
+
+<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/05_Dim_Localizacao.png width="420px">
+
+- 06_Dim_Revenda.ktr
+
+<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/06_Dim_Revenda.png width="420px">
+
+- 07_Dim_Bandeira.ktr
+
+<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/07_Dim_Bandeira.png width="420px">
+
+- 08_Carga_Fato_Preco
+
+<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/08_Carga_Fato_Preco.png width="420px">
+
+</div>
