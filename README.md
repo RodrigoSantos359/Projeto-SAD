@@ -13,7 +13,7 @@ CSV bruto da ANP (semestral, nacional) → validação do layout → filtro PE �
 → STAGING limpa → dimensões → fato → controle da carga
                          ↘ etl_rejeitados (nada é descartado em silêncio)
 ```
-###### Fonte dos dados brutos: [Série Histórica de Preços de Combustíveis]([link](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/serie-historica-de-precos-de-combustiveis))
+###### Fonte dos dados brutos: [Série Histórica de Preços de Combustíveis](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/serie-historica-de-precos-de-combustiveis)
 
 **Estrutura do banco**
 
