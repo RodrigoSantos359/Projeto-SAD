@@ -10,29 +10,25 @@
 -- Tabela fato: o PostgreSQL NÃO cria índice automático para FOREIGN KEY.
 --
 -- id_tempo: NÃO precisa de índice próprio. Ele é a primeira coluna da chave
---           primária pk_fato_preco_combustivel (id_tempo, id_revenda, id_combustivel),
---           cujo índice já atende filtros e junções por id_tempo.
+--           primária pk_fato_preco_combustivel (id_tempo, id_local, id_combustivel,
+--           data_coleta), cujo índice já atende filtros e junções por semestre.
 -- Demais FKs: índice simples para junções/filtros por dimensão e para não
 -- fazer varredura completa da fato ao validar DELETE/UPDATE nas dimensões.
 -- -----------------------------------------------------------------------------
+CREATE INDEX IF NOT EXISTS ix_fato_id_local       ON fato_preco_combustivel (id_local);
 CREATE INDEX IF NOT EXISTS ix_fato_id_combustivel ON fato_preco_combustivel (id_combustivel);
-CREATE INDEX IF NOT EXISTS ix_fato_id_localizacao ON fato_preco_combustivel (id_localizacao);
-CREATE INDEX IF NOT EXISTS ix_fato_id_revenda     ON fato_preco_combustivel (id_revenda);
 CREATE INDEX IF NOT EXISTS ix_fato_id_bandeira    ON fato_preco_combustivel (id_bandeira);
 
--- semestre: filtro/agrupamento mais comum nas análises (2021.1 ... 2026.1).
-CREATE INDEX IF NOT EXISTS ix_fato_semestre       ON fato_preco_combustivel (semestre);
+-- data_coleta: consultas por dia/mês dentro do semestre.
+CREATE INDEX IF NOT EXISTS ix_fato_data_coleta    ON fato_preco_combustivel (data_coleta);
 
 -- -----------------------------------------------------------------------------
--- Dimensões: data, combustivel, municipio já têm índice pelas constraints
--- UNIQUE (uq_dim_tempo_data, uq_dim_combustivel, uq_dim_localizacao).
--- Esses índices também aceleram os Database Lookup / Insert-Update do PDI.
---
--- periodo / ano: a dim_tempo tem ~2.000 linhas, então um índice quase não ajuda
--- (o PostgreSQL faz seq scan em milissegundos). Criado só porque é o filtro
--- mais usado nas análises semestrais e custa praticamente nada.
+-- Dimensões: cnpj, combustivel, periodo já têm índice pelas constraints UNIQUE
+-- (que também aceleram os Database Lookup / Insert-Update do PDI).
+-- dim_local: análises filtram/agrupam por município e UF.
+-- A dim_tempo semestral tem só 13 linhas: nenhum índice extra é necessário.
 -- -----------------------------------------------------------------------------
-CREATE INDEX IF NOT EXISTS ix_dim_tempo_periodo ON dim_tempo (periodo);
+CREATE INDEX IF NOT EXISTS ix_dim_local_uf_municipio ON dim_local (uf, municipio);
 
 -- -----------------------------------------------------------------------------
 -- Tabelas de controle do ETL: consultas por carga/arquivo.

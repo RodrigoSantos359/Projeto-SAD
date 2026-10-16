@@ -415,8 +415,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>40</xloc>
-      <yloc>120</yloc>
+      <xloc>32</xloc>
+      <yloc>112</yloc>
       <attributes_kjc />
     </entry>
     <entry>
@@ -435,7 +435,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>160</xloc>
-      <yloc>120</yloc>
+      <yloc>112</yloc>
       <attributes_kjc />
     </entry>
     <entry>
@@ -465,8 +465,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>290</xloc>
-      <yloc>20</yloc>
+      <xloc>288</xloc>
+      <yloc>16</yloc>
       <attributes_kjc />
     </entry>
     <entry>
@@ -477,8 +477,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>420</xloc>
-      <yloc>20</yloc>
+      <xloc>416</xloc>
+      <yloc>16</yloc>
       <attributes_kjc />
     </entry>
     <entry>
@@ -516,8 +516,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>420</xloc>
-      <yloc>120</yloc>
+      <xloc>416</xloc>
+      <yloc>112</yloc>
       <attributes_kjc />
     </entry>
     <entry>
@@ -616,8 +616,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>810</xloc>
-      <yloc>120</yloc>
+      <xloc>816</xloc>
+      <yloc>112</yloc>
       <attributes_kjc />
     </entry>
     <entry>
@@ -631,8 +631,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>810</xloc>
-      <yloc>20</yloc>
+      <xloc>816</xloc>
+      <yloc>16</yloc>
       <attributes_kjc />
     </entry>
     <entry>
@@ -670,8 +670,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>940</xloc>
-      <yloc>120</yloc>
+      <xloc>944</xloc>
+      <yloc>112</yloc>
       <attributes_kjc />
     </entry>
     <entry>
@@ -714,13 +714,13 @@
       <attributes_kjc />
     </entry>
     <entry>
-      <name>05 Dim_Localizacao</name>
+      <name>05 Dim_Local</name>
       <description />
       <type>TRANS</type>
       <attributes />
       <specification_method>filename</specification_method>
       <trans_object_id />
-      <filename>${Internal.Entry.Current.Directory}/../transformations/05_Dim_Localizacao.ktr</filename>
+      <filename>${Internal.Entry.Current.Directory}/../transformations/05_Dim_Local.ktr</filename>
       <transname />
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -749,17 +749,17 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>1200</xloc>
-      <yloc>120</yloc>
+      <yloc>112</yloc>
       <attributes_kjc />
     </entry>
     <entry>
-      <name>06 Dim_Revenda</name>
+      <name>06 Dim_Bandeira</name>
       <description />
       <type>TRANS</type>
       <attributes />
       <specification_method>filename</specification_method>
       <trans_object_id />
-      <filename>${Internal.Entry.Current.Directory}/../transformations/06_Dim_Revenda.ktr</filename>
+      <filename>${Internal.Entry.Current.Directory}/../transformations/06_Dim_Bandeira.ktr</filename>
       <transname />
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -787,18 +787,18 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1330</xloc>
-      <yloc>120</yloc>
+      <xloc>1326</xloc>
+      <yloc>112</yloc>
       <attributes_kjc />
     </entry>
     <entry>
-      <name>07 Dim_Bandeira</name>
+      <name>07 Fato_Preco</name>
       <description />
       <type>TRANS</type>
       <attributes />
       <specification_method>filename</specification_method>
       <trans_object_id />
-      <filename>${Internal.Entry.Current.Directory}/../transformations/07_Dim_Bandeira.ktr</filename>
+      <filename>${Internal.Entry.Current.Directory}/../transformations/07_Carga_Fato_Preco.ktr</filename>
       <transname />
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -826,47 +826,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1460</xloc>
-      <yloc>120</yloc>
-      <attributes_kjc />
-    </entry>
-    <entry>
-      <name>08 Fato_Preco</name>
-      <description />
-      <type>TRANS</type>
-      <attributes />
-      <specification_method>filename</specification_method>
-      <trans_object_id />
-      <filename>${Internal.Entry.Current.Directory}/../transformations/08_Carga_Fato_Preco.ktr</filename>
-      <transname />
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <clear_rows>N</clear_rows>
-      <clear_files>N</clear_files>
-      <set_logfile>N</set_logfile>
-      <logfile />
-      <logext />
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Basic</loglevel>
-      <cluster>N</cluster>
-      <slave_server_name />
-      <set_append_logfile>N</set_append_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <create_parent_folder>N</create_parent_folder>
-      <logging_remote_work>N</logging_remote_work>
-      <run_configuration>Pentaho local</run_configuration>
-      <suppress_result_data>N</suppress_result_data>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>1590</xloc>
-      <yloc>120</yloc>
+      <xloc>1454</xloc>
+      <yloc>112</yloc>
       <attributes_kjc />
     </entry>
     <entry>
@@ -898,8 +859,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1720</xloc>
-      <yloc>120</yloc>
+      <xloc>1582</xloc>
+      <yloc>112</yloc>
       <attributes_kjc />
     </entry>
     <entry>
@@ -913,8 +874,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1850</xloc>
-      <yloc>120</yloc>
+      <xloc>1726</xloc>
+      <yloc>112</yloc>
       <attributes_kjc />
     </entry>
     <entry>
@@ -925,8 +886,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1980</xloc>
-      <yloc>120</yloc>
+      <xloc>1854</xloc>
+      <yloc>112</yloc>
       <attributes_kjc />
     </entry>
     <entry>
@@ -947,8 +908,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>940</xloc>
-      <yloc>330</yloc>
+      <xloc>944</xloc>
+      <yloc>336</yloc>
       <attributes_kjc />
     </entry>
     <entry>
@@ -962,8 +923,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1080</xloc>
-      <yloc>330</yloc>
+      <xloc>1072</xloc>
+      <yloc>336</yloc>
       <attributes_kjc />
     </entry>
     <entry>
@@ -975,8 +936,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1220</xloc>
-      <yloc>330</yloc>
+      <xloc>1216</xloc>
+      <yloc>336</yloc>
       <attributes_kjc />
     </entry>
   </entries>
@@ -1091,7 +1052,7 @@
     </hop>
     <hop>
       <from>04 Dim_Combustivel</from>
-      <to>05 Dim_Localizacao</to>
+      <to>05 Dim_Local</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -1099,8 +1060,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>05 Dim_Localizacao</from>
-      <to>06 Dim_Revenda</to>
+      <from>05 Dim_Local</from>
+      <to>06 Dim_Bandeira</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -1108,8 +1069,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>06 Dim_Revenda</from>
-      <to>07 Dim_Bandeira</to>
+      <from>06 Dim_Bandeira</from>
+      <to>07 Fato_Preco</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -1117,16 +1078,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>07 Dim_Bandeira</from>
-      <to>08 Fato_Preco</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>08 Fato_Preco</from>
+      <from>07 Fato_Preco</from>
       <to>Atualizar controle da carga</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -1207,7 +1159,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>05 Dim_Localizacao</from>
+      <from>05 Dim_Local</from>
       <to>Registrar ERRO no controle</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -1216,7 +1168,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>06 Dim_Revenda</from>
+      <from>06 Dim_Bandeira</from>
       <to>Registrar ERRO no controle</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -1225,16 +1177,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>07 Dim_Bandeira</from>
-      <to>Registrar ERRO no controle</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>08 Fato_Preco</from>
+      <from>07 Fato_Preco</from>
       <to>Registrar ERRO no controle</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -1274,8 +1217,8 @@
     <notepad>
       <note>Caminho de sucesso na linha de cima; qualquer falha segue para "Registrar ERRO no controle".
 Arquivos ja CONCLUIDOS sao ignorados (etl_controle_carga).</note>
-      <xloc>40</xloc>
-      <yloc>420</yloc>
+      <xloc>128</xloc>
+      <yloc>320</yloc>
       <width>637</width>
       <heigth>50</heigth>
       <fontname>Segoe UI</fontname>

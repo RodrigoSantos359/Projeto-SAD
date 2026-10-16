@@ -1,4 +1,12 @@
 {
+  "ca-2020-01.csv": {
+    "url": "https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2020-01.csv",
+    "bytes_servidor": 86655383
+  },
+  "ca-2020-02.csv": {
+    "url": "https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2020-02.csv",
+    "bytes_servidor": 38903171
+  },
   "ca-2021-01.csv": {
     "url": "https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2021-01.csv",
     "bytes_servidor": 57911124

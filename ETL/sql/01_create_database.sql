@@ -16,4 +16,4 @@ CREATE DATABASE dm_anp_pernambuco
          TEMPLATE = template0;
 
 COMMENT ON DATABASE dm_anp_pernambuco IS
-    'Data Mart de preços de combustíveis - Pernambuco (ANP, 2021 a 2026.1)';
+    'Data Mart de preços de combustíveis - Pernambuco (ANP, 2020 a 2026.1)';

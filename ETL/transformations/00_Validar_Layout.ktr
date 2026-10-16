@@ -1,10 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
     <name>00_Validar_Layout</name>
     <description>Le a primeira linha (cabecalho) de cada arquivo da pasta de entrada e compara com LAYOUT_ESPERADO. Aborta o job se alguma coluna estiver faltando, sobrando ou fora de ordem.</description>
-    <extended_description />
-    <trans_version />
+    <extended_description/>
+    <trans_version/>
     <trans_type>Normal</trans_type>
     <directory>/</directory>
     <parameters>
@@ -66,12 +66,12 @@
     </parameters>
     <log>
       <trans-log-table>
-        <connection />
-        <schema />
-        <table />
-        <size_limit_lines />
-        <interval />
-        <timeout_days />
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
         <field>
           <id>ID_BATCH</id>
           <enabled>Y</enabled>
@@ -96,37 +96,37 @@
           <id>LINES_READ</id>
           <enabled>Y</enabled>
           <name>LINES_READ</name>
-          <subject />
+          <subject/>
         </field>
         <field>
           <id>LINES_WRITTEN</id>
           <enabled>Y</enabled>
           <name>LINES_WRITTEN</name>
-          <subject />
+          <subject/>
         </field>
         <field>
           <id>LINES_UPDATED</id>
           <enabled>Y</enabled>
           <name>LINES_UPDATED</name>
-          <subject />
+          <subject/>
         </field>
         <field>
           <id>LINES_INPUT</id>
           <enabled>Y</enabled>
           <name>LINES_INPUT</name>
-          <subject />
+          <subject/>
         </field>
         <field>
           <id>LINES_OUTPUT</id>
           <enabled>Y</enabled>
           <name>LINES_OUTPUT</name>
-          <subject />
+          <subject/>
         </field>
         <field>
           <id>LINES_REJECTED</id>
           <enabled>Y</enabled>
           <name>LINES_REJECTED</name>
-          <subject />
+          <subject/>
         </field>
         <field>
           <id>ERRORS</id>
@@ -180,11 +180,11 @@
         </field>
       </trans-log-table>
       <perf-log-table>
-        <connection />
-        <schema />
-        <table />
-        <interval />
-        <timeout_days />
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
         <field>
           <id>ID_BATCH</id>
           <enabled>Y</enabled>
@@ -262,10 +262,10 @@
         </field>
       </perf-log-table>
       <channel-log-table>
-        <connection />
-        <schema />
-        <table />
-        <timeout_days />
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
         <field>
           <id>ID_BATCH</id>
           <enabled>Y</enabled>
@@ -328,10 +328,10 @@
         </field>
       </channel-log-table>
       <step-log-table>
-        <connection />
-        <schema />
-        <table />
-        <timeout_days />
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
         <field>
           <id>ID_BATCH</id>
           <enabled>Y</enabled>
@@ -404,10 +404,10 @@
         </field>
       </step-log-table>
       <metrics-log-table>
-        <connection />
-        <schema />
-        <table />
-        <timeout_days />
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
         <field>
           <id>ID_BATCH</id>
           <enabled>Y</enabled>
@@ -456,9 +456,9 @@
       </metrics-log-table>
     </log>
     <maxdate>
-      <connection />
-      <table />
-      <field />
+      <connection/>
+      <table/>
+      <field/>
       <offset>0.0</offset>
       <maxdiff>0.0</maxdiff>
     </maxdate>
@@ -469,7 +469,7 @@
     <feedback_shown>Y</feedback_shown>
     <feedback_size>50000</feedback_size>
     <using_thread_priorities>Y</using_thread_priorities>
-    <shared_objects_file />
+    <shared_objects_file/>
     <capture_step_performance>N</capture_step_performance>
     <step_performance_capturing_delay>1000</step_performance_capturing_delay>
     <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
@@ -492,8 +492,8 @@
     <notepad>
       <note>Valida o layout ANTES de carregar: os inputs do PDI leem colunas por posicao, entao aqui confirmamos pelo NOME que cada posicao contem a coluna esperada.
 Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
-      <xloc>40</xloc>
-      <yloc>20</yloc>
+      <xloc>48</xloc>
+      <yloc>352</yloc>
       <width>1081</width>
       <heigth>60</heigth>
       <fontname>Segoe UI</fontname>
@@ -587,20 +587,20 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
   <step>
     <name>Abortar</name>
     <type>Abort</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <row_threshold>0</row_threshold>
     <message>Layout do arquivo diferente do esperado. Veja o log.</message>
     <always_log_rows>Y</always_log_rows>
     <abort_option>ABORT_WITH_ERROR</abort_option>
-    <attributes />
-    <cluster_schema />
+    <attributes/>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -608,21 +608,21 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1320</xloc>
-      <yloc>200</yloc>
+      <xloc>1312</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
     <name>Cabecalho CSV</name>
     <type>TextFileInput</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <accept_filenames>Y</accept_filenames>
     <passing_through_fields>N</passing_through_fields>
@@ -631,7 +631,7 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
     <separator>${CSV_SEPARADOR}</separator>
     <enclosure>"</enclosure>
     <enclosure_breaks>N</enclosure_breaks>
-    <escapechar />
+    <escapechar/>
     <header>N</header>
     <nr_headerlines>1</nr_headerlines>
     <footer>N</footer>
@@ -643,18 +643,18 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
     <nr_lines_doc_header>0</nr_lines_doc_header>
     <noempty>Y</noempty>
     <include>N</include>
-    <include_field />
+    <include_field/>
     <rownum>N</rownum>
     <rownumByFile>Y</rownumByFile>
-    <rownum_field />
+    <rownum_field/>
     <format>mixed</format>
     <encoding>UTF-8</encoding>
     <length>Characters</length>
     <add_to_result_filenames>N</add_to_result_filenames>
     <file>
-      <name />
-      <filemask />
-      <exclude_filemask />
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
       <type>CSV</type>
@@ -666,12 +666,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c01</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -681,12 +681,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c02</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -696,12 +696,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c03</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -711,12 +711,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c04</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -726,12 +726,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c05</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -741,12 +741,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c06</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -756,12 +756,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c07</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -771,12 +771,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c08</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -786,12 +786,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c09</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -801,12 +801,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c10</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -816,12 +816,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c11</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -831,12 +831,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c12</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -846,12 +846,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c13</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -861,12 +861,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c14</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -876,12 +876,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c15</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -891,12 +891,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c16</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -906,12 +906,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c17</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -921,12 +921,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c18</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -936,12 +936,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c19</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -951,12 +951,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c20</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -966,12 +966,12 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
       <field>
         <name>c21</name>
         <type>String</type>
-        <format />
-        <currency />
-        <decimal />
-        <group />
-        <nullif />
-        <ifnull />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
         <position>-1</position>
         <length>-1</length>
         <precision>-1</precision>
@@ -982,30 +982,30 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
     <limit>0</limit>
     <error_ignored>N</error_ignored>
     <skip_bad_files>N</skip_bad_files>
-    <file_error_field />
-    <file_error_message_field />
+    <file_error_field/>
+    <file_error_message_field/>
     <error_line_skipped>N</error_line_skipped>
-    <error_count_field />
-    <error_fields_field />
-    <error_text_field />
-    <bad_line_files_destination_directory />
+    <error_count_field/>
+    <error_fields_field/>
+    <error_text_field/>
+    <bad_line_files_destination_directory/>
     <bad_line_files_extension>warning</bad_line_files_extension>
-    <error_line_files_destination_directory />
+    <error_line_files_destination_directory/>
     <error_line_files_extension>error</error_line_files_extension>
-    <line_number_files_destination_directory />
+    <line_number_files_destination_directory/>
     <line_number_files_extension>line</line_number_files_extension>
     <date_format_lenient>Y</date_format_lenient>
     <date_format_locale>pt_BR</date_format_locale>
     <shortFileFieldName>nome_arquivo</shortFileFieldName>
-    <pathFieldName />
-    <hiddenFieldName />
-    <lastModificationTimeFieldName />
-    <uriNameFieldName />
-    <rootUriNameFieldName />
-    <extensionFieldName />
-    <sizeFieldName />
-    <attributes />
-    <cluster_schema />
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <attributes/>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1014,40 +1014,40 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
     </remotesteps>
     <GUI>
       <xloc>480</xloc>
-      <yloc>200</yloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
     <name>Cabecalho XLSX</name>
     <type>ExcelInput</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <header>N</header>
     <noempty>Y</noempty>
     <stoponempty>N</stoponempty>
-    <filefield />
-    <sheetfield />
-    <sheetrownumfield />
-    <rownumfield />
-    <sheetfield />
-    <filefield />
+    <filefield/>
+    <sheetfield/>
+    <sheetrownumfield/>
+    <rownumfield/>
+    <sheetfield/>
+    <filefield/>
     <limit>0</limit>
-    <encoding />
+    <encoding/>
     <add_to_result_filenames>N</add_to_result_filenames>
     <accept_filenames>Y</accept_filenames>
     <accept_field>filename</accept_field>
     <accept_stepname>Tipo de arquivo</accept_stepname>
     <file>
-      <name />
-      <filemask />
-      <exclude_filemask />
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
     </file>
@@ -1059,10 +1059,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c02</name>
@@ -1071,10 +1071,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c03</name>
@@ -1083,10 +1083,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c04</name>
@@ -1095,10 +1095,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c05</name>
@@ -1107,10 +1107,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c06</name>
@@ -1119,10 +1119,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c07</name>
@@ -1131,10 +1131,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c08</name>
@@ -1143,10 +1143,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c09</name>
@@ -1155,10 +1155,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c10</name>
@@ -1167,10 +1167,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c11</name>
@@ -1179,10 +1179,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c12</name>
@@ -1191,10 +1191,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c13</name>
@@ -1203,10 +1203,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c14</name>
@@ -1215,10 +1215,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c15</name>
@@ -1227,10 +1227,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c16</name>
@@ -1239,10 +1239,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c17</name>
@@ -1251,10 +1251,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c18</name>
@@ -1263,10 +1263,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c19</name>
@@ -1275,10 +1275,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c20</name>
@@ -1287,10 +1287,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
       <field>
         <name>c21</name>
@@ -1299,10 +1299,10 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format />
-        <currency />
-        <decimal />
-        <group />
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
       </field>
     </fields>
     <sheets>
@@ -1310,24 +1310,24 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
     <strict_types>N</strict_types>
     <error_ignored>N</error_ignored>
     <error_line_skipped>N</error_line_skipped>
-    <bad_line_files_destination_directory />
+    <bad_line_files_destination_directory/>
     <bad_line_files_extension>warning</bad_line_files_extension>
-    <error_line_files_destination_directory />
+    <error_line_files_destination_directory/>
     <error_line_files_extension>error</error_line_files_extension>
-    <line_number_files_destination_directory />
+    <line_number_files_destination_directory/>
     <line_number_files_extension>line</line_number_files_extension>
     <shortFileFieldName>nome_arquivo</shortFileFieldName>
-    <pathFieldName />
-    <hiddenFieldName />
-    <lastModificationTimeFieldName />
-    <uriNameFieldName />
-    <rootUriNameFieldName />
-    <extensionFieldName />
-    <sizeFieldName />
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
     <spreadsheet_type>SAX_POI</spreadsheet_type>
     <password>Encrypted </password>
-    <attributes />
-    <cluster_schema />
+    <attributes/>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1343,13 +1343,13 @@ Para mudar o layout esperado altere o parametro LAYOUT_ESPERADO.</note>
   <step>
     <name>Comparar com LAYOUT_ESPERADO</name>
     <type>ScriptValueMod</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <compatible>N</compatible>
     <optimizationLevel>9</optimizationLevel>
@@ -1411,8 +1411,8 @@ var divergencias = difs.join(" | ");
         <replace>N</replace>
       </field>
     </fields>
-    <attributes />
-    <cluster_schema />
+    <attributes/>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1428,13 +1428,13 @@ var divergencias = difs.join(" | ");
   <step>
     <name>Extensao minuscula</name>
     <type>StringOperations</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <fields>
       <field>
@@ -1443,16 +1443,16 @@ var divergencias = difs.join(" | ");
         <trim_type>both</trim_type>
         <lower_upper>lower</lower_upper>
         <padding_type>none</padding_type>
-        <pad_char />
-        <pad_len />
+        <pad_char/>
+        <pad_len/>
         <init_cap>no</init_cap>
         <mask_xml>none</mask_xml>
         <digits>none</digits>
         <remove_special_characters>none</remove_special_characters>
       </field>
     </fields>
-    <attributes />
-    <cluster_schema />
+    <attributes/>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1460,24 +1460,24 @@ var divergencias = difs.join(" | ");
       </output>
     </remotesteps>
     <GUI>
-      <xloc>200</xloc>
-      <yloc>140</yloc>
+      <xloc>192</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
     <name>Extensao nao suportada</name>
     <type>Dummy</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
-    <attributes />
-    <cluster_schema />
+    <attributes/>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1485,21 +1485,21 @@ var divergencias = difs.join(" | ");
       </output>
     </remotesteps>
     <GUI>
-      <xloc>340</xloc>
-      <yloc>260</yloc>
+      <xloc>336</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
     <name>Layout OK?</name>
     <type>FilterRows</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <send_true_to>Log layout OK</send_true_to>
     <send_false_to>Log layout invalido</send_false_to>
@@ -1508,7 +1508,7 @@ var divergencias = difs.join(" | ");
         <negated>N</negated>
         <leftvalue>layout_ok</leftvalue>
         <function>=</function>
-        <rightvalue />
+        <rightvalue/>
         <value>
           <name>constant</name>
           <type>String</type>
@@ -1516,12 +1516,12 @@ var divergencias = difs.join(" | ");
           <length>-1</length>
           <precision>-1</precision>
           <isnull>N</isnull>
-          <mask />
+          <mask/>
         </value>
       </condition>
     </compare>
-    <attributes />
-    <cluster_schema />
+    <attributes/>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1537,13 +1537,13 @@ var divergencias = difs.join(" | ");
   <step>
     <name>Listar arquivos</name>
     <type>GetFileNames</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <filter>
       <filterfiletype>only_files</filterfiletype>
@@ -1552,21 +1552,21 @@ var divergencias = difs.join(" | ");
     <rownum>N</rownum>
     <isaddresult>N</isaddresult>
     <filefield>N</filefield>
-    <rownum_field />
-    <filename_Field />
-    <wildcard_Field />
-    <exclude_wildcard_Field />
+    <rownum_field/>
+    <filename_Field/>
+    <wildcard_Field/>
+    <exclude_wildcard_Field/>
     <dynamic_include_subfolders>N</dynamic_include_subfolders>
     <limit>0</limit>
     <file>
       <name>${DIR_ENTRADA}</name>
       <filemask>(?i).*\.(xlsx|csv)$</filemask>
-      <exclude_filemask />
+      <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
     </file>
-    <attributes />
-    <cluster_schema />
+    <attributes/>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1574,21 +1574,21 @@ var divergencias = difs.join(" | ");
       </output>
     </remotesteps>
     <GUI>
-      <xloc>60</xloc>
-      <yloc>140</yloc>
+      <xloc>64</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
     <name>Log layout OK</name>
     <type>WriteToLog</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <loglevel>log_level_basic</loglevel>
     <displayHeader>Y</displayHeader>
@@ -1600,8 +1600,8 @@ var divergencias = difs.join(" | ");
         <name>nome_arquivo</name>
       </field>
     </fields>
-    <attributes />
-    <cluster_schema />
+    <attributes/>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1609,7 +1609,7 @@ var divergencias = difs.join(" | ");
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1180</xloc>
+      <xloc>1184</xloc>
       <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1617,13 +1617,13 @@ var divergencias = difs.join(" | ");
   <step>
     <name>Log layout invalido</name>
     <type>WriteToLog</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <loglevel>log_level_error</loglevel>
     <displayHeader>Y</displayHeader>
@@ -1641,8 +1641,8 @@ var divergencias = difs.join(" | ");
         <name>cabecalho_lido</name>
       </field>
     </fields>
-    <attributes />
-    <cluster_schema />
+    <attributes/>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1650,21 +1650,21 @@ var divergencias = difs.join(" | ");
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1180</xloc>
-      <yloc>200</yloc>
+      <xloc>1184</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
     <name>Ordenar CSV</name>
     <type>SelectValues</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <fields>
       <field>
@@ -1735,8 +1735,8 @@ var divergencias = difs.join(" | ");
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
-    <attributes />
-    <cluster_schema />
+    <attributes/>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1744,21 +1744,21 @@ var divergencias = difs.join(" | ");
       </output>
     </remotesteps>
     <GUI>
-      <xloc>620</xloc>
-      <yloc>200</yloc>
+      <xloc>624</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
     <name>Ordenar XLSX</name>
     <type>SelectValues</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <fields>
       <field>
@@ -1829,8 +1829,8 @@ var divergencias = difs.join(" | ");
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
-    <attributes />
-    <cluster_schema />
+    <attributes/>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1838,7 +1838,7 @@ var divergencias = difs.join(" | ");
       </output>
     </remotesteps>
     <GUI>
-      <xloc>620</xloc>
+      <xloc>624</xloc>
       <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1846,13 +1846,13 @@ var divergencias = difs.join(" | ");
   <step>
     <name>Primeira linha por arquivo</name>
     <type>MemoryGroupBy</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <give_back_row>N</give_back_row>
     <group>
@@ -1865,131 +1865,131 @@ var divergencias = difs.join(" | ");
         <aggregate>c01</aggregate>
         <subject>c01</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c02</aggregate>
         <subject>c02</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c03</aggregate>
         <subject>c03</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c04</aggregate>
         <subject>c04</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c05</aggregate>
         <subject>c05</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c06</aggregate>
         <subject>c06</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c07</aggregate>
         <subject>c07</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c08</aggregate>
         <subject>c08</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c09</aggregate>
         <subject>c09</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c10</aggregate>
         <subject>c10</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c11</aggregate>
         <subject>c11</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c12</aggregate>
         <subject>c12</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c13</aggregate>
         <subject>c13</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c14</aggregate>
         <subject>c14</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c15</aggregate>
         <subject>c15</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c16</aggregate>
         <subject>c16</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c17</aggregate>
         <subject>c17</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c18</aggregate>
         <subject>c18</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c19</aggregate>
         <subject>c19</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c20</aggregate>
         <subject>c20</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
       <field>
         <aggregate>c21</aggregate>
         <subject>c21</subject>
         <type>FIRST_INCL_NULL</type>
-        <valuefield />
+        <valuefield/>
       </field>
     </fields>
-    <attributes />
-    <cluster_schema />
+    <attributes/>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -1997,28 +1997,28 @@ var divergencias = difs.join(" | ");
       </output>
     </remotesteps>
     <GUI>
-      <xloc>760</xloc>
-      <yloc>140</yloc>
+      <xloc>752</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
     <name>Tipo de arquivo</name>
     <type>SwitchCase</type>
-    <description />
+    <description/>
     <distribute>Y</distribute>
-    <custom_distribution />
+    <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name />
+      <schema_name/>
     </partitioning>
     <fieldname>ext</fieldname>
     <use_contains>N</use_contains>
     <case_value_type>String</case_value_type>
-    <case_value_format />
-    <case_value_decimal />
-    <case_value_group />
+    <case_value_format/>
+    <case_value_decimal/>
+    <case_value_group/>
     <default_target_step>Extensao nao suportada</default_target_step>
     <cases>
       <case>
@@ -2030,8 +2030,8 @@ var divergencias = difs.join(" | ");
         <target_step>Cabecalho CSV</target_step>
       </case>
     </cases>
-    <attributes />
-    <cluster_schema />
+    <attributes/>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -2039,8 +2039,8 @@ var divergencias = difs.join(" | ");
       </output>
     </remotesteps>
     <GUI>
-      <xloc>340</xloc>
-      <yloc>140</yloc>
+      <xloc>336</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2049,5 +2049,5 @@ var divergencias = difs.join(" | ");
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
-  <attributes />
+  <attributes/>
 </transformation>

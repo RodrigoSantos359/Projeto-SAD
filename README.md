@@ -18,11 +18,22 @@ CSV bruto da ANP (semestral, nacional) → validação do layout → filtro PE �
 **Estrutura do banco**
 
 ```text
-                    dim_tempo (id_tempo = AAAAMMDD)
+                 dim_tempo (semestre: id_tempo = ano*10 + semestre)
                          │
-dim_combustivel ── fato_preco_combustivel ── dim_localizacao
-                     │            │
-               dim_revenda    dim_bandeira
+dim_combustivel ── fato_preco_combustivel ── dim_local (posto + município/UF/estado/região)
+                         │
+                   dim_bandeira
+```
+
+## Passo a passo para executar
+
+**Subir o PostgresSQL**
+Na pasta do projeto (onde está o `docker-compose.yml`):
+
+No terminal bash digite:
+
+```bash
+docker compose up -d
 ```
 
 Foi utilizado o Docker para criar um container para o banco de dados Postgres, para ter uma melhor organização do projeto,
@@ -79,20 +90,16 @@ Veja os arquivos na pasta:
 
 <img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/04_Dim_Combustivel.png width="420px">
 
-05_Dim_Localizacao.ktr
+05_Dim_Local.ktr
 
-<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/05_Dim_Localizacao.png width="420px">
+<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/05_Dim_Local.png width="420px">
 
-06_Dim_Revenda.ktr
+06_Dim_Bandeira.ktr
 
-<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/06_Dim_Revenda.png width="420px">
+<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/06_Dim_Bandeira.png width="420px">
 
-07_Dim_Bandeira.ktr
+07_Carga_Fato_Preco
 
-<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/07_Dim_Bandeira.png width="420px">
-
-08_Carga_Fato_Preco
-
-<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/08_Carga_Fato_Preco.png width="420px">
+<img alt="GitHub language count" src=https://github.com/RodrigoSantos359/Projeto-SAD/blob/main/ETL/prints/07_Carga_Fato_Preco.png width="420px">
 
 </div>
